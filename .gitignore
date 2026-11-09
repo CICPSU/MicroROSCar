@@ -11,3 +11,6 @@ __pycache__/
 # Local files
 .vscode/
 .DS_Store
+
+# Generated maps
+maps/
