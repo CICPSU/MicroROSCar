@@ -94,15 +94,8 @@ Successful completion prints `Controller finished: status=4`; the car should
 stop near the goal. If it behaves unexpectedly, stop the run and use the car's
 power switch if needed.
 
-The goal arrow's orientation is currently ignored: the script preserves the
-robot's heading at the start as the desired final heading. That is the behavior
-used in the successful November 13, 2026 test.
-
-**Handoff validation note:** the original manual-start version of this
-Navfn/RPP workflow successfully drove and stopped a real car on November 13,
-2026 (`FollowPath` status `4`, about 0.12 m final position error). The new
-single-launch wrapper and RViz goal-click option are packaging improvements;
-they still need one short on-car smoke test before a student demonstration.
+The goal arrow's orientation is ignored: the script preserves the robot's
+heading at the start as the desired final heading.
 
 ### Quick 40 cm test (no RViz goal click)
 
