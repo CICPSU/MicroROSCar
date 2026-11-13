@@ -1,6 +1,7 @@
-# Keyboard Teleoperation
+# Step A — Keyboard Teleoperation
 
 Follow these steps to connect and drive the MicroROSCar using the ROS-Backup-PC.
+No map or SLAM is needed for this step. Do not run Step B or C at the same time.
 
 ## 1. Start the micro-ROS Agent
 
@@ -70,6 +71,8 @@ Use the following keys:
 2. Press `Ctrl+C` in Terminal 2.
 3. Turn off the robot.
 4. Press `Ctrl+C` in Terminal 1.
+
+Next: [Step B — Keyboard Driving + Map Creation](slam_mapping.md).
 
 ---
 

@@ -64,3 +64,28 @@ ros2 topic info /cmd_vel
 ```
 
 If the robot moves unexpectedly, press `k` to stop it. Use the physical power switch if necessary.
+
+## 5. Step C — Navigation on Your Saved Map
+
+Follow [Step C](navigation.md) using the map saved in [Step B](slam_mapping.md).
+No instructor or sample map is included. Pass its absolute YAML path using
+`map:="$HOME/MicroROSCar/maps/my_map.yaml"` and keep its referenced map image
+beside it. A missing map argument or nonexistent YAML stops startup.
+
+Complete B's shutdown steps before starting C. Do not run SLAM, its TF nodes
+or keyboard teleop concurrently with autonomous navigation. C starts its own
+Agent and TF nodes; do not leave B's copies running.
+
+In a terminal with the ROS environment sourced, check:
+
+```bash
+ros2 lifecycle get /map_server
+ros2 lifecycle get /amcl
+ros2 lifecycle get /planner_server
+ros2 lifecycle get /controller_server
+```
+
+All four should be `active [3]` after the initial pose is set. If AMCL has no
+`map -> odom_frame` TF, set the car's initial pose in RViz. Do not retry a
+blocked goal: use another open point. The navigation parameters deliberately
+set `GridBased.tolerance=0.0` so the planner does not silently move a goal.

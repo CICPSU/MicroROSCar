@@ -3,7 +3,7 @@
 <package format="3">
   <name>microroscar_bringup</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>Yahboom MicroROSCar bringup, mapping and navigation</description>
   <maintainer email="njh5734@psu.edu">njh5734@AD.PSU.EDU</maintainer>
   <license>Apache-2.0</license>
 
@@ -22,4 +22,15 @@
   <exec_depend>launch</exec_depend>
   <exec_depend>launch_ros</exec_depend>
   <exec_depend>slam_toolbox</exec_depend>
+  <exec_depend>micro_ros_agent</exec_depend>
+  <exec_depend>nav2_map_server</exec_depend>
+  <exec_depend>nav2_amcl</exec_depend>
+  <exec_depend>nav2_planner</exec_depend>
+  <exec_depend>nav2_navfn_planner</exec_depend>
+  <exec_depend>nav2_controller</exec_depend>
+  <exec_depend>nav2_regulated_pure_pursuit_controller</exec_depend>
+  <exec_depend>nav2_lifecycle_manager</exec_depend>
+  <exec_depend>nav2_msgs</exec_depend>
+  <exec_depend>action_msgs</exec_depend>
+  <exec_depend>rviz2</exec_depend>
 </package>

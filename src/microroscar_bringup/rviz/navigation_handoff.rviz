@@ -1,0 +1,200 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+  - Class: rviz_common/Tool Properties
+    Name: Tool Properties
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Value: true
+      Alpha: 0.35
+      Cell Size: 1
+      Color: 160; 160; 164
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Line Style:
+        Value: Lines
+        Line Width: 0.03
+    - Class: rviz_default_plugins/Map
+      Name: Saved Map
+      Enabled: true
+      Value: true
+      Alpha: 0.7
+      Color Scheme: map
+      Draw Behind: false
+      Use Timestamp: false
+      Topic:
+        Value: /map
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 5
+        Filter size: 10
+      Update Topic:
+        Value: /map_updates
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+    - Class: rviz_default_plugins/LaserScan
+      Name: LaserScan
+      Enabled: true
+      Value: true
+      Topic:
+        Value: /scan
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+        Filter size: 10
+      Style: Flat Squares
+      Size (m): 0.01
+      Alpha: 1
+      Color Transformer: Intensity
+      Position Transformer: XYZ
+      Channel Name: intensity
+      Use rainbow: true
+      Autocompute Intensity Bounds: true
+      Decay Time: 0
+    - Class: rviz_default_plugins/Path
+      Name: Planned Path
+      Enabled: true
+      Value: true
+      Topic:
+        Value: /plan
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+        Filter size: 10
+      Line Style: Billboards
+      Line Width: 0.05
+      Color: 237; 51; 59
+      Alpha: 1
+      Buffer Length: 1
+      Pose Style: None
+    - Class: rviz_default_plugins/PoseWithCovariance
+      Name: AMCL Pose
+      Enabled: true
+      Value: true
+      Topic:
+        Value: /amcl_pose
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 5
+        Filter size: 10
+      Shape: Axes
+      Axes Length: 0.2
+      Axes Radius: 0.1
+      Alpha: 1
+      Color: 255; 25; 0
+      Covariance:
+        Value: true
+        Position:
+          Value: true
+          Alpha: 0.3
+          Color: 204; 51; 204
+          Scale: 1
+        Orientation:
+          Value: true
+          Alpha: 0.5
+          Color: 255; 255; 127
+          Color Style: Unique
+          Frame: Local
+          Offset: 1
+          Scale: 1
+    - Class: rviz_default_plugins/Map
+      Name: Global Costmap
+      Enabled: true
+      Value: true
+      Alpha: 0.25
+      Color Scheme: costmap
+      Draw Behind: false
+      Use Timestamp: false
+      Topic:
+        Value: /global_costmap/costmap
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 5
+        Filter size: 10
+      Update Topic:
+        Value: /global_costmap/costmap_updates
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+    - Class: rviz_default_plugins/Map
+      Name: Local Costmap
+      Enabled: false
+      Value: false
+      Alpha: 0.4
+      Color Scheme: costmap
+      Draw Behind: false
+      Use Timestamp: false
+      Topic:
+        Value: /local_costmap/costmap
+        Reliability Policy: Reliable
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Depth: 5
+        Filter size: 10
+      Update Topic:
+        Value: /local_costmap/costmap_updates
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+  Enabled: true
+  Global Options:
+    Fixed Frame: map
+    Background Color: 48; 48; 48
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+    - Class: rviz_default_plugins/SetInitialPose
+      Topic:
+        Value: /initialpose
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Value: /goal_pose
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+    - Class: rviz_default_plugins/PublishPoint
+      Topic:
+        Value: /clicked_point
+        Reliability Policy: Reliable
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Depth: 5
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/TopDownOrtho
+      Name: Current View
+      Value: TopDownOrtho (rviz)
+      Target Frame: <Fixed Frame>
+      Near Clip Distance: 0.01
+      Scale: 120
+      Angle: 0
+      X: 0.5
+      Y: 0.5
+    Saved: ~

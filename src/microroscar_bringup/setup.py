@@ -15,12 +15,14 @@ setup(
          glob('launch/*.launch.py')),
         ('share/' + package_name + '/config',
          glob('config/*.yaml')),
+        ('share/' + package_name + '/rviz',
+         glob('rviz/*.rviz')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='njh5734@AD.PSU.EDU',
     maintainer_email='njh5734@psu.edu',
-    description='TODO: Package description',
+    description='Yahboom MicroROSCar teleop, mapping and navigation bringup',
     license='Apache-2.0',
     extras_require={
         'test': [
@@ -30,6 +32,7 @@ setup(
     entry_points={
         'console_scripts': [
             'odom_tf = microroscar_bringup.odom_tf:main',
+            'follow_path = microroscar_bringup.follow_path:main',
         ],
     },
 )

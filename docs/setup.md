@@ -42,6 +42,13 @@ If a directory path appears, the setup is complete.
 
 You are ready to connect and operate the robot!
 
-Continue to [Keyboard Teleoperation](keyboard_teleop.md).
+Start with [Step A: Keyboard Teleoperation](keyboard_teleop.md), then complete
+[Step B: Map Creation](slam_mapping.md), and finally
+[Step C: Navigation on Your Saved Map](navigation.md). Step C uses the map
+you save in B; no sample map is included.
+
+For Step C, the ROS-Backup-PC must have the Nav2 map server, AMCL, planner,
+controller, lifecycle manager and RViz packages installed. They were present
+on the workstation used for the November 2026 validation.
 
 If anything seems wrong, refer to [Troubleshooting](troubleshooting.md).
